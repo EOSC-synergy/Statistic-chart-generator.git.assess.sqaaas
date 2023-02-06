@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/Statistic-chart-generator:
+      branch: master
+      repo: https://github.com/madgeek-arc/Statistic-chart-generator.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/Statistic-chart-generator git:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-persimmon-cow.sh
+        container: qc.acc_messy-ecru-husky
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/Statistic-chart-generator find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-khaki-mayfly.sh
+        container: qc.doc_baggy-mauve-jellyfish
+      github.com/madgeek-arc/Statistic-chart-generator git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-scarlet-saola.sh
+        container: qc.doc_droopy-mauve-barb
+      github.com/madgeek-arc/Statistic-chart-generator markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-turquoise-newt.sh
+        container: qc.doc_squeaky-chestnut-woodlouse
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/Statistic-chart-generator licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-xanthic-otter.sh
+        container: qc.lic_blurry-ruby-dalmatian
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/Statistic-chart-generator checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-lemon-eel.sh
+        container: qc.sty_muggy-cornflower-echidna
+      github.com/madgeek-arc/Statistic-chart-generator hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-tomato-hedgehog.sh
+        container: qc.sty_trippy-ecru-foxhound
+      github.com/madgeek-arc/Statistic-chart-generator jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-lilac-eel.sh
+        container: qc.sty_muggy-gamboge-foxhound
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/Statistic-chart-generator get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-magenta-cougar.sh
+        container: qc.ver_squeaky-champagne-oriole
+timeout: 5400
