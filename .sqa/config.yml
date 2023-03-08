@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/Statistic-chart-generator git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-celadon-retriever.sh
-        container: qc.acc_geeky-salmon-heron
+        - /usr/bin/env sh .sqa/script.smelly-amber-elephant.sh
+        container: qc.acc_woolly-blue-crane
   QC.Doc:
     repos:
       github.com/madgeek-arc/Statistic-chart-generator find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-pink-setter.sh
-        container: qc.doc_cozy-apricot-sheepdog
+        - /usr/bin/env sh .sqa/script.smelly-pumpkin-affenpinscher.sh
+        container: qc.doc_homey-lemon-coral
       github.com/madgeek-arc/Statistic-chart-generator git:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-xanthic-newfoundland.sh
-        container: qc.doc_shaky-ochre-tortoise
+        - /usr/bin/env sh .sqa/script.pretty-chocolate-angora.sh
+        container: qc.doc_nippy-alizarin-corgi
       github.com/madgeek-arc/Statistic-chart-generator markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-corn-uakari.sh
-        container: qc.doc_beady-wisteria-opossum
+        - /usr/bin/env sh .sqa/script.skimpy-aquamarine-ferret.sh
+        container: qc.doc_hilly-razzmatazz-lemur
   QC.Lic:
     repos:
       github.com/madgeek-arc/Statistic-chart-generator licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-beige-cuscus.sh
-        container: qc.lic_ugly-cinnabar-saola
+        - /usr/bin/env sh .sqa/script.gamy-crimson-octopus.sh
+        container: qc.lic_woolly-linen-octopus
   QC.Sty:
     repos:
       github.com/madgeek-arc/Statistic-chart-generator checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-sapphire-ant.sh
-        container: qc.sty_stuffy-celadon-robin
+        - /usr/bin/env sh .sqa/script.messy-red-goose.sh
+        container: qc.sty_ready-sepia-dog
       github.com/madgeek-arc/Statistic-chart-generator hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-alizarin-albatross.sh
-        container: qc.sty_skimpy-ruby-jaguar
+        - /usr/bin/env sh .sqa/script.shaky-puce-flounder.sh
+        container: qc.sty_surly-seashell-discus
       github.com/madgeek-arc/Statistic-chart-generator jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-lavender-ferret.sh
-        container: qc.sty_tacky-ochre-abyssinian
+        - /usr/bin/env sh .sqa/script.stealthy-chestnut-chipmunk.sh
+        container: qc.sty_queasy-wisteria-paradise
   QC.Ver:
     repos:
       github.com/madgeek-arc/Statistic-chart-generator get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-azure-tortoise.sh
-        container: qc.ver_goopy-silver-corgi
+        - /usr/bin/env sh .sqa/script.zippy-mauve-dhole.sh
+        container: qc.ver_sunny-fuchsia-chameleon
 timeout: 5400
